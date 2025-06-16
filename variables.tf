@@ -1,49 +1,20 @@
-variable "project" {
-  default = "roboshop"
-}
-
-variable "common_tags" {
-  default = {
-    Project   = "roboshop"
-    Terraform = "true"
-  }
-}
-
-variable "sg_name" {
-  default = "allow-all"
-}
-
-variable "sg_description" {
-  default = "allowing all ports from all IP address"
-}
-
-variable "instances" {
-  default = ["mongodb", "redis"]
-}
-
-variable "from_port" {
-  default = 0
-}
-
-variable "to_port" {
-  default = 0
-}
-
-
-variable "cidr_blocks" {
-  default = ["0.0.0.0/0"]
-}
-
 variable "ami_id" {
   type        = string
   default     = "ami-09c813fb71547fc4f"
-  description = "AMI ID of joindevops RHEL9"
+  description = "AMI ID of the EC2 Instance"
 }
 
 variable "instance_type" {
-  default = {
-    dev  = "t3.micro"
-    prod = "t3.small"
-  }
+  type = string
+  default = "t3.micro"
+  description = "Instance type for the EC2 Instance, can be overridden per environment"
+}
 
+#mandatory variables to be passed from the command line
+variable "sg_ids" {
+  type        = list
+}
+
+variable "tags" {
+  type        = map
 }
