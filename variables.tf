@@ -5,16 +5,16 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-  type = string
-  default = "t3.micro"
+  type        = string
+  default     = "t3.micro"
   description = "Instance type for the EC2 Instance, can be overridden per environment"
 }
 
 #mandatory variables to be passed from the command line
 variable "sg_ids" {
-  type        = list
+  type = list
 }
 
 variable "tags" {
-  type        = map
+  type = map
 }
