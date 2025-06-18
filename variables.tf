@@ -17,9 +17,9 @@ variable "instance_type" {
 
 #mandatory variables to be passed from the command line
 variable "sg_ids" {
-  type = list(any)
+  type = list(any) # no of security groups 1,2,3 to be attached to the instance
 }
 
 variable "tags" {
-  type = map(any)
+  type = map(any) # Key-value pairs for tagging the instance
 }
