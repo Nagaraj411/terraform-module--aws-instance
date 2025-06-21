@@ -1,4 +1,3 @@
-/*
 # AWS EC2 Instance
 You can create an EC2 instance in joindevops using this module.
 
@@ -20,4 +19,3 @@ You can create an EC2 instance in joindevops using this module.
 * `public_ip` - Public IP of the created instance
 * `private_ip` - Private IP of the created instance
 * `instance_id` - Instance ID of the created instance
-*/
