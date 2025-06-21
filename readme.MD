@@ -1,10 +1,10 @@
-# AWS EC2 Instance
+# 🚀AWS EC2 Instance
 You can create an EC2 instance in joindevops using this module.
 
-## Inputs
+## ⚙️ Inputs
 
 * `ami_id` (Optional) - AMI ID to be used by the instance.
-  - Default: devops-practice (`ami-09c813fb71547fc4f`)
+  - Default: devops-practice ("AMI_ID")
 
 * `instance_type` (Optional) - Instance type to be used.
   - Valid values: `t3.micro`, `t3.small`, `t3.medium`
@@ -14,7 +14,7 @@ You can create an EC2 instance in joindevops using this module.
 
 * `tags` (Required) - A map of tags to be associated with the instance.
 
-## Outputs
+## ⚙️ Outputs
 
 * `public_ip` - Public IP of the created instance
 * `private_ip` - Private IP of the created instance
