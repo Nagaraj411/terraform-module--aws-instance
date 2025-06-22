@@ -3,7 +3,7 @@ variable "ami_id" {
   default     = "ami-09c813fb71547fc4f"
   description = "AMI ID of the EC2 Instance"
 }
-
+  
 variable "instance_type" {
   type        = string
   default     = "t3.micro"
@@ -17,9 +17,14 @@ variable "instance_type" {
 
 #mandatory variables to be passed from the command line
 variable "sg_ids" {
-  type = list(any) # no of security groups 1,2,3 to be attached to the instance
+  type = list # no of VPC security groups 1,2,3 to be attached to the instance
 }
 
 variable "tags" {
-  type = map(any) # Key-value pairs for tagging the instance
+  type = map # Key-value pairs for tagging the instance
+}
+
+variable "instances" {
+  description = "list of instance name created"
+  type = list(string) # List of instance IDs to create multiple instances if needed
 }
