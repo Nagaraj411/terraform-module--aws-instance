@@ -10,6 +10,8 @@ You can create an EC2 instance in joindevops using this module.
   - Valid values: `t3.micro`, `t3.small`, `t3.medium`
   - Default: `t3.micro`
 
+* `Creating multiple instance` (Optional) - Multiple Instances are Created.
+
 * `sg_ids` (Required) - A list of Security Group IDs to attach to the instance.
 
 * `tags` (Required) - A map of tags to be associated with the instance.
